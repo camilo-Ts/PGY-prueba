@@ -6,11 +6,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './pages/home/home.component';
+import { PrincipalComponent } from './pages/home/principal.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, TabsComponent],
+  declarations: [AppComponent, PrincipalComponent, TabsComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

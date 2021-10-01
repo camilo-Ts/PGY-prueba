@@ -1,0 +1,11 @@
+#col-avatar{
+    min-height: 100px;
+}
+ion-avatar{
+    height: 90%;
+    width: 90%;
+}
+
+h2{
+    font-size: 3.5rem;
+}

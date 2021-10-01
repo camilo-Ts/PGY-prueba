@@ -9,12 +9,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { PrincipalComponent } from './pages/home/principal.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { HeaderPrincipalComponent } from './components/headerPrincipal/header-principal.component';
+import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
 
 @NgModule({
-  declarations: [AppComponent, PrincipalComponent, TabsComponent, HeaderPrincipalComponent],
+  declarations: [
+    AppComponent, 
+    PrincipalComponent, 
+    TabsComponent, 
+    HeaderPrincipalComponent, 
+    MiPerfilComponent
+  ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

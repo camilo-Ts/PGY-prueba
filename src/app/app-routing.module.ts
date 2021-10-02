@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './pages/home/principal.component';
 import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
+import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: 'miPerfil',
     component: MiPerfilComponent
   },
+  {
+    path: 'nuevoProyecto',
+    component: NuevoProyectoComponent
+  }
 ];
 
 @NgModule({

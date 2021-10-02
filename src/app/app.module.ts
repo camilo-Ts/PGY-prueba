@@ -10,6 +10,7 @@ import { PrincipalComponent } from './pages/home/principal.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { HeaderPrincipalComponent } from './components/headerPrincipal/header-principal.component';
 import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
+import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
     PrincipalComponent, 
     TabsComponent, 
     HeaderPrincipalComponent, 
-    MiPerfilComponent
+    MiPerfilComponent,
+    NuevoProyectoComponent,
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

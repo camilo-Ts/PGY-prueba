@@ -9,12 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { PrincipalComponent } from './pages/home/principal.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { HeaderPrincipalComponent } from './components/headerPrincipal/header-principal.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PasswordComponent } from './pages/password/password.component';
 
 @NgModule({
-  declarations: [AppComponent, PrincipalComponent, TabsComponent, HeaderPrincipalComponent],
+  declarations: [AppComponent, PrincipalComponent, TabsComponent, HeaderPrincipalComponent, RegisterComponent, LoginComponent, PasswordComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

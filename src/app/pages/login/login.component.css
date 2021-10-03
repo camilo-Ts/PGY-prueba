@@ -1,0 +1,9 @@
+#logo-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagen-login {
+  width: 15rem;
+}

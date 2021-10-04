@@ -18,6 +18,9 @@ import { HeaderChatsComponent } from './components/headerChats/headerChats.compo
 import { ChatComponent } from './pages/chat/chat.component';
 import { FooterChatsComponent } from './components/footerChats/footerChats.component';
 import { ChatGrupalComponent } from './pages/chatGrupal/chatGrupal.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PasswordComponent } from './pages/password/password.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ChatGrupalComponent } from './pages/chatGrupal/chatGrupal.component';
     HeaderChatsComponent, 
     ChatComponent, 
     FooterChatsComponent,
-    ChatGrupalComponent
+    ChatGrupalComponent, 
+    RegisterComponent, 
+    LoginComponent, 
+    PasswordComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

@@ -1,0 +1,62 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10" offset="1">
+        <ion-card>
+
+          <ion-list id="logo-login">
+            <ion-item>
+              <!-- <ion-thumbnail slot="start"></ion-thumbnail> -->
+              <!-- <ion-img src="src/assets/icon/pixlr-bg-result.png"></ion-img> -->
+              <img id="imagen-login" src="../../../assets/icon/pixlr-bg-result.png" alt="">
+              <ion-label>{{item.text}}</ion-label>
+            </ion-item>
+          </ion-list>
+
+          <ion-card-content>
+            <ion-grid>
+
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Nombre de Usuario</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Contraseña</ion-label>
+                    <ion-input type="password"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col>
+                  <a href="register">Registrarse</a>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col>
+                  <ion-button expand="block" href="home">Iniciar Sesión</ion-button>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col>
+                  <a href="password">¿Ha olvidado la constraseña?</a>
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -7,11 +7,19 @@ import { ProyectoActualComponent } from './pages/proyectosActuales/proyectoActua
 import { ProyectoAnteriorComponent } from './pages/proyectosAnteriores/proyectoAnterior.component';
 import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
 import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { PasswordComponent } from './pages/password/password.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    component:LoginComponent
+  },
+  {
+    path: '',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -33,7 +41,16 @@ const routes: Routes = [
   {
     path: 'nuevoProyecto',
     component: NuevoProyectoComponent
-  }
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'password',
+    component: PasswordComponent
+  },
+  
 ];
 
 @NgModule({

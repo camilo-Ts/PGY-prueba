@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
     selector:'header-principal',
@@ -7,7 +8,15 @@ import {Component} from '@angular/core';
 })
 
 export class HeaderPrincipalComponent {
-    constructor() {
+
+    menu:string = "";
+    constructor(private menuCtr: MenuController) {
         
+    }
+
+    abrirMenu(condicion:boolean, nombreMenu:string){
+        if (condicion == true) {
+            this.menuCtr.open(nombreMenu);
+        }
     }
 }

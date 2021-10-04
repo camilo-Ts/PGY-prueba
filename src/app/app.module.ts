@@ -12,11 +12,23 @@ import { HeaderPrincipalComponent } from './components/headerPrincipal/header-pr
 import { ProyectoAnteriorComponent } from './pages/proyectosAnteriores/proyectoAnterior.component';
 import { ProyectoActualComponent } from './pages/proyectosActuales/proyectoActual.component';
 
+import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
+import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.component';
+
 @NgModule({
-  declarations: [AppComponent, PrincipalComponent, TabsComponent, HeaderPrincipalComponent, ProyectoAnteriorComponent, ProyectoActualComponent],
+  declarations: [
+    AppComponent, 
+    PrincipalComponent, 
+    TabsComponent, 
+    HeaderPrincipalComponent, 
+    MiPerfilComponent,
+    NuevoProyectoComponent,
+    ProyectoAnteriorComponent,
+    ProyectoActualComponent
+  ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,0 +1,69 @@
+<!-- Componente header-principal -->
+<header-principal></header-principal>
+
+<!-- Contenido de la pagina miPerfil -->
+<ion-content class="ion-padding">
+    <ion-grid>
+        <!-- Fila contenedora del nombre completo y la foto de perfil del usuario -->
+        <ion-row>
+            <!-- Columna de nombre completo -->
+            <ion-col size="7">
+                <ion-toolbar>
+                    <!-- <ion-title size="large">Nombre apellidos</ion-title> -->
+                    <h2>Nombre apellidos</h2>
+                </ion-toolbar>
+            </ion-col>
+            <!-- Columna con la foto de perfil del usuario -->
+            <ion-col size="5" id="col-avatar">
+                <ion-avatar>
+                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+                </ion-avatar>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" class="padding-0">
+                <ion-grid class="padding-0">
+                    <ion-row>
+                        <ion-col>
+                            <h3 class="titulo">Descripcion</h3>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-text>
+                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dicta voluptas
+                                    nostrum voluptatibus corporis quae sint ea itaque deserunt harum.</h5>
+                            </ion-text>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" class="padding-0">
+                <ion-grid class="padding-0">
+                    <ion-row>
+                        <ion-col>
+                            <h3 class="titulo">Proyectos</h3>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-text>
+                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dicta voluptas
+                                    nostrum voluptatibus corporis quae sint ea itaque deserunt harum.</h5>
+                            </ion-text>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-button id="btn-editarPerfil" (click)="onClick()" shape="round">
+        Editar perfil
+    </ion-button>
+</ion-content>
+
+<!-- Componente tabs -->
+<app-tabs></app-tabs>

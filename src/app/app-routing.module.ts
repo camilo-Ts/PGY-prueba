@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from './pages/chat/chat.component';
+import { ChatGrupalComponent } from './pages/chatGrupal/chatGrupal.component';
 import { PrincipalComponent } from './pages/home/principal.component';
 import { ProyectoActualComponent } from './pages/proyectosActuales/proyectoActual.component';
 import { ProyectoAnteriorComponent } from './pages/proyectosAnteriores/proyectoAnterior.component';
@@ -17,12 +19,12 @@ const routes: Routes = [
     component: PrincipalComponent
   },
   {
-    path: 'proyectoAnterior',
-    component: ProyectoAnteriorComponent
+    path: 'chats',
+    component: ChatComponent
   },
   {
-    path: 'proyectoActual',
-    component: ProyectoActualComponent
+    path: 'chatGrupal',
+    component: ChatGrupalComponent
   },
   {
     path: 'miPerfil',

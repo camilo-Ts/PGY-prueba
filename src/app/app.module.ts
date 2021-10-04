@@ -14,6 +14,10 @@ import { ProyectoActualComponent } from './pages/proyectosActuales/proyectoActua
 
 import { MiPerfilComponent } from './pages/miPerfil/miPerfil.component';
 import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.component';
+import { HeaderChatsComponent } from './components/headerChats/headerChats.component';
+import { ChatComponent } from './pages/chat/chat.component';
+import { FooterChatsComponent } from './components/footerChats/footerChats.component';
+import { ChatGrupalComponent } from './pages/chatGrupal/chatGrupal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.comp
     MiPerfilComponent,
     NuevoProyectoComponent,
     ProyectoAnteriorComponent,
-    ProyectoActualComponent
+    ProyectoActualComponent, 
+    HeaderChatsComponent, 
+    ChatComponent, 
+    FooterChatsComponent,
+    ChatGrupalComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

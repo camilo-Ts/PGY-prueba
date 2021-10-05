@@ -21,6 +21,7 @@ import { ChatGrupalComponent } from './pages/chatGrupal/chatGrupal.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PasswordComponent } from './pages/password/password.component';
+import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProyecto.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PasswordComponent } from './pages/password/password.component';
     ChatGrupalComponent, 
     RegisterComponent, 
     LoginComponent, 
-    PasswordComponent
+    PasswordComponent,
+    OpcionesProyectoComponent,
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

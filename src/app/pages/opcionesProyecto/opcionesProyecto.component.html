@@ -1,0 +1,35 @@
+<header-principal></header-principal>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" class="botones-menu" href="home">
+                    Nuevo proyecto
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" class="botones-menu" href="proyectosAnteriores">
+                    Proyectos anteriores
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" class="botones-menu" href="proyectosActuales">
+                    Proyectos actuales
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<!-- Componente tabs -->
+<ion-footer>
+    <ion-toolbar>
+        <app-tabs></app-tabs>
+    </ion-toolbar>
+</ion-footer>

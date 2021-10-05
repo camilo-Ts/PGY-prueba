@@ -10,6 +10,7 @@ import { NuevoProyectoComponent } from './pages/nuevoProyecto/nuevoProyecto.comp
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { PasswordComponent } from './pages/password/password.component';
+import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProyecto.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,14 @@ const routes: Routes = [
     component: NuevoProyectoComponent
   },
   {
+    path: 'proyectosAnteriores',
+    component: ProyectoAnteriorComponent
+  },
+  {
+    path: 'proyectosActuales',
+    component: ProyectoActualComponent
+  },
+  {
     path: 'register',
     component: RegisterComponent
   },
@@ -51,13 +60,46 @@ const routes: Routes = [
     component: PasswordComponent
   },
   {
+    path: 'opcionesProyecto',
+    component: OpcionesProyectoComponent
+  },
+  {
     path: 'home/miPerfil',
     redirectTo:'miPerfil'
   },
   
   {
+    path: 'home/opcionesProyecto',
+    redirectTo:'opcionesProyecto'
+  },
+  {
+    path: 'home/home',
+    redirectTo:'home'
+  },
+  
+  {
     path: 'miPerfil/home',
     redirectTo:'home'
+  },
+  {
+    path: 'miPerfil/miPerfil',
+    redirectTo:'miPerfil'
+  },
+  {
+    path: 'miPerfil/opcionesProyecto',
+    redirectTo:'opcionesProyecto'
+  },
+  {
+    path: 'opcionesProyecto/opcionesProyecto',
+    redirectTo:'opcionesProyecto'
+  },
+  {
+    path: 'opcionesProyecto/home',
+    redirectTo:'home'
+  },
+  {
+    path: 'opcionesProyecto/miPerfil',
+    redirectTo:'miPerfil'
   },
   
 ];

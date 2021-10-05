@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 
 @Component({
     selector:'header-principal',
@@ -10,7 +10,7 @@ import { MenuController } from '@ionic/angular';
 export class HeaderPrincipalComponent {
 
     menu:string = "";
-    constructor(private menuCtr: MenuController) {
+    constructor(private menuCtr: MenuController, private navCtr:NavController) {
         
     }
 
@@ -18,5 +18,9 @@ export class HeaderPrincipalComponent {
         if (condicion == true) {
             this.menuCtr.open(nombreMenu);
         }
+    }
+
+    redireccionPerfil(){
+        this.navCtr.navigateForward('/miPerfil')
     }
 }

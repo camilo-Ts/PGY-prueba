@@ -1,0 +1,19 @@
+.columna-imagen {
+    display: flex;
+    justify-content: center;
+}
+.columna-imagen img{
+    max-width: 300px;
+}
+
+.descripcion-proyecto h2{
+    font-size: 30px;
+}
+.descripcion-proyecto .descripcion-proyecto-contenido{
+    font-size: 17px;
+}
+
+.boton-chat ion-col{
+    display: flex;
+    justify-content: center;
+}

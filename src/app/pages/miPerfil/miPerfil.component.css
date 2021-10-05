@@ -19,7 +19,7 @@ h2{
 }
 
 
-#btn-editarPerfil{
+.btn-editarPerfil{
     position: relative;
     bottom: 15px;
     /* left: 50%; */

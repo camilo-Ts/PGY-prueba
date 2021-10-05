@@ -22,6 +22,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProyecto.component';
+import { ProyectoComponent } from './pages/proyecto/proyecto.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProy
     LoginComponent, 
     PasswordComponent,
     OpcionesProyectoComponent,
+    ProyectoComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'principal-app',
@@ -7,7 +8,10 @@ import { Component } from '@angular/core';
 })
 
 export class PrincipalComponent {
-    constructor() {
+    constructor(private navCtr: NavController) {
         
+    }
+    cambiarPagina(){
+        this.navCtr.navigateForward('/proyecto');
     }
 }

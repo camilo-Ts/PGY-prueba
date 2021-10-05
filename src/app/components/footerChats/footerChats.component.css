@@ -1,0 +1,22 @@
+/* ion-input {
+    --background: #353535;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+} */
+
+ion-header{
+    border-top: 1px solid rgb(193 193 193);
+}
+.contenido-input{
+    background-color: #f1f1f1b6;
+}
+ion-input {
+    --background: #ffffff;
+    border-radius: 20px;
+    color: rgb(56, 56, 56);
+    font-size: 15px;
+}
+
+.input-chat {
+    display: flex;
+}

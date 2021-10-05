@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProyecto.component';
+import { ProyectoComponent } from './pages/proyecto/proyecto.component';
 
 
 const routes: Routes = [
@@ -101,6 +102,10 @@ const routes: Routes = [
     path: 'opcionesProyecto/miPerfil',
     redirectTo:'miPerfil'
   },
+  {
+    path:'proyecto',
+    component:ProyectoComponent
+  }
   
 ];
 

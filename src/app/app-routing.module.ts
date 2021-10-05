@@ -50,6 +50,15 @@ const routes: Routes = [
     path: 'password',
     component: PasswordComponent
   },
+  {
+    path: 'home/miPerfil',
+    redirectTo:'miPerfil'
+  },
+  
+  {
+    path: 'miPerfil/home',
+    redirectTo:'home'
+  },
   
 ];
 

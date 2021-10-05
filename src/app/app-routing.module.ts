@@ -105,7 +105,7 @@ const routes: Routes = [
   {
     path:'proyecto',
     component:ProyectoComponent
-  }
+  },
   
 ];
 

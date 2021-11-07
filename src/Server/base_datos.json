@@ -1,4 +1,13 @@
 {
-    "usuario":[],
-    "proyecto":[]
+    "usuario":[
+        {
+            "id":1,
+            "usuario":"Usuario1",
+            "contrasenia":"12345"
+        }
+    ],
+    "proyecto":[],
+    "usuario_log":{
+        
+    }
 }

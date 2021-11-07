@@ -35,4 +35,15 @@ export class UsuarioService {
 
     // return this.client.get<Observable<IUsuario>>(this.url+"/1");
   }
+
+  public agregarUsuario(nuevoUsuario:IUsuario){
+    this.client.post(this.url,{
+      "id": nuevoUsuario.id,
+      "nombre": nuevoUsuario.nombre,
+      "apellido": nuevoUsuario.apellido,
+      "correo": nuevoUsuario.correo,
+      "telefono": nuevoUsuario.telefono,
+      "contrasenia": nuevoUsuario.contrasenia
+    })
+  }
 }

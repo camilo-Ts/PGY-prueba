@@ -17,7 +17,7 @@
                 <ion-col>
                   <ion-item>
                     <ion-label position="floating">Nombre</ion-label>
-                    <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+                    <ion-input type="text" [(ngModel)]="usuario.nombre"></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -26,7 +26,7 @@
                 <ion-col>
                   <ion-item>
                     <ion-label position="floating">Apellidos</ion-label>
-                    <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+                    <ion-input type="text" [(ngModel)]="usuario.apellido"></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -35,7 +35,16 @@
                 <ion-col>
                   <ion-item>
                     <ion-label position="floating">Nombre de Usuario</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input type="text" [(ngModel)]="nombreusuario"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Numero de telefono</ion-label>
+                    <ion-input type="number" [(ngModel)]="usuario.telefono"></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -44,7 +53,7 @@
                 <ion-col>
                   <ion-item>
                     <ion-label position="floating">Correo Electrónico</ion-label>
-                    <ion-input type="text" [(ngModel)]="correo"></ion-input>
+                    <ion-input type="text" [(ngModel)]="usuario.correo"></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -53,7 +62,7 @@
                 <ion-col>
                   <ion-item>
                     <ion-label position="floating">Contraseña</ion-label>
-                    <ion-input type="password" [(ngModel)]="contrasenia"></ion-input>
+                    <ion-input type="password" [(ngModel)]="usuario.contrasenia"></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -62,7 +71,7 @@
                 <ion-col>
                   <ion-item>
                     <ion-label position="floating">Confirmar Contraseña</ion-label>
-                    <ion-input type="password" ></ion-input>
+                    <ion-input type="password" [(ngModel)]="contrasenia2" ></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>

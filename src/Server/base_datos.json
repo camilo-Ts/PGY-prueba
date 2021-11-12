@@ -1,13 +1,19 @@
 {
-    "usuario":[
-        {
-            "id":1,
-            "usuario":"Usuario1",
-            "contrasenia":"12345"
-        }
-    ],
-    "proyecto":[],
-    "usuario_log":{
-        
+  "usuario": [
+    {
+      "id": 1,
+      "usuario": "Usuario1",
+      "contrasenia": "12345"
+    },
+    {
+      "nombre": "sdkfskdf",
+      "apellido": "xupalito",
+      "contrasenia": "123",
+      "correo": "ksdjfjsd",
+      "telefono": 12345,
+      "id": 2
     }
+  ],
+  "proyecto": [],
+  "usuario_log": {}
 }

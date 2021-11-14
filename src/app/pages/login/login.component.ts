@@ -15,7 +15,8 @@ export class LoginComponent {
     ngOnInit(){
         // console.log(this.servicio.iniciarSesion("hola","hola").subscribe((datos)=>{console.log(datos);
         // }));
-        console.log(this.servicio.iniciarSesion("hola","hola"));
+        // console.log(this.servicio.iniciarSesion("hola","hola").subscribe(m=>{console.log(m);
+        // }));
         
     }
 }

@@ -1,9 +1,9 @@
 export interface IProyecto {
-    id?:number,
-    nombre:string,
-    estado:boolean,
+    id?: number,
+    nombre: string,
+    descripcion: string,
+    estado: boolean,
     fecha_in: Date,
     fecha_fn: Date,
-    jefe_proy: number,
-    gastos?:number
+    jefe_proy: number
 }

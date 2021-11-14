@@ -11,6 +11,7 @@ import { tap } from 'rxjs/operators';
 export class UsuarioService {
 
   private url: string = "http://localhost:3000/usuario";
+  private usuario_log: string = "http://localhost:3000/usuario_log";
 
   constructor(private client: HttpClient) { }
 
@@ -35,4 +36,12 @@ export class UsuarioService {
 
     // return this.client.get<Observable<IUsuario>>(this.url+"/1");
   }
+
+  public jefeProyecto(): Observable<IUsuario> {
+    return this.client.get<IUsuario>(this.usuario_log, {
+      headers:{
+        "Content-type":"application/json"
+      }
+    });
+  } 
 }

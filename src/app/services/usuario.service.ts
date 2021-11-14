@@ -61,4 +61,22 @@ export class UsuarioService {
       }
     });
   }
+
+  // public agregarUsuario(nuevoUsuario:IUsuario){
+  //   this.client.post(this.url,{
+  //     "id": nuevoUsuario.id,
+  //     "nombre": nuevoUsuario.nombre,
+  //     "apellido": nuevoUsuario.apellido,
+  //     "correo": nuevoUsuario.correo,
+  //     "telefono": nuevoUsuario.telefono,
+  //     "contrasenia": nuevoUsuario.contrasenia
+  //   })
+
+  public agregarUsuario(nuevoUsuario: IUsuario): Observable<IUsuario>{
+    return this.client.post<IUsuario>(this.url, JSON.stringify(nuevoUsuario),{
+      headers: {
+        "Content-Type":"application/json"
+      }
+    })
+  }
 }

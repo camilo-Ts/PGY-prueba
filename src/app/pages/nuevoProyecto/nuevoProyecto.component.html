@@ -13,16 +13,17 @@
 <ion-content [fullscreen]="true" class="ion-padding">
     <form (ngSubmit)="onSubmit()" class="ion-padding">
         <ion-item>
-            <ion-label position="floating">Nombre del proyecto</ion-label>
-            <ion-input required type="text"></ion-input>
+            <ion-label position="floating">Nombre del Proyecto</ion-label>
+            <ion-input required type="text" [(ngModel)]="proyecto.nombre"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label position="floating">Description</ion-label>
-            <ion-textarea rows="5"></ion-textarea>
+            <ion-label position="floating">Descripción del Proyecto</ion-label>
+            <ion-textarea rows="5" [(ngModel)]="proyecto.descripcion"></ion-textarea>
         </ion-item>
         <ion-item>
-            <ion-label>DD MM YYYY</ion-label>
-            <ion-datetime displayFormat=" DD MM  YY" placeholder="Fecha limite" min="2021-01-10" max="2030"></ion-datetime>
+            <ion-label>DD/MM/YYYY</ion-label>
+            <ion-datetime displayFormat="DD MM YY" placeholder="Fecha limite" min="2021-01-10" max="2030">
+            </ion-datetime>
         </ion-item>
 
         <!-- <ion-button block color="primary" type="submit" [disabled]="loginForm.invalid">
@@ -32,18 +33,18 @@
 </ion-content>
 
 <ion-footer>
-<ion-grid>
-    <ion-row>
-        <ion-col size="6">
-            <ion-button href="home" expand="block" >
-                Cancelar
-            </ion-button>
-        </ion-col>
-        <ion-col size="6">
-            <ion-button href="home" expand="block" type="submit">
-                Crear
-            </ion-button>
-        </ion-col>
-    </ion-row>
-</ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6">
+                <ion-button href="home" expand="block">
+                    Cancelar
+                </ion-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-button href="home" expand="block" type="submit">
+                    Crear
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-footer>

@@ -11,7 +11,7 @@ import { tap } from 'rxjs/operators';
 export class UsuarioService {
 
   private url: string = "http://localhost:3000/usuario";
-  private urlUsuario: string = "http://localhost:3000/usuario_log"
+  private usuario_log: string = "http://localhost:3000/usuario_log";
 
   constructor(private client: HttpClient) { }
 
@@ -24,7 +24,8 @@ export class UsuarioService {
     let usuarios:Observable<Array<IUsuario>>;
 
     let miUsuario:IUsuario;
-    this.client.post(this.urlUsuario, JSON.stringify(miUsuario), {
+
+    this.client.post(this.usuario_log, JSON.stringify(miUsuario), {
       headers: {
         "Content-Type":"application/json"
       }
@@ -42,9 +43,15 @@ export class UsuarioService {
     //   headers: {
     //     "Content-type":"application/json"
     //   }
-    // }).subscribe(m:Array<IUsuario>< => {
-    //   listaUsuario = m;
-    // });    
-    
-  // }
+    // });
+
+    // return this.client.get<Observable<IUsuario>>(this.url+"/1");
+
+  public jefeProyecto(): Observable<IUsuario> {
+    return this.client.get<IUsuario>(this.usuario_log, {
+      headers:{
+        "Content-type":"application/json"
+      }
+    });
+  } 
 }

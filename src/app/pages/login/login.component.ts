@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent {
     public usuario:string;
     public contrasenia:string;
 
-    constructor( private servicio:UsuarioService){
+    constructor( private servicio:UsuarioService, private navCtr:NavController){
 
     }
 
@@ -22,10 +23,18 @@ export class LoginComponent {
         // }));
         // console.log(this.servicio.iniciarSesion("hola","hola").subscribe(m=>{console.log(m);
         // }));
+        this.servicio.comprobarLogueo();
         
     }
 
     public iniciarSesion(){
-        this.servicio.iniciarSesion(this.usuario, this.contrasenia);
+        let estado:boolean = false;
+
+        estado = this.servicio.iniciarSesion(this.usuario, this.contrasenia);
+        
+        if (estado) {
+            this.navCtr.navigateForward('home');
+        }
+        
     }
 }

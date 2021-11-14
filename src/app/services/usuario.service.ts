@@ -24,8 +24,9 @@ export class UsuarioService {
   /**
    * iniciarSesion
    */
-  public iniciarSesion(usuario: string, contrasenia: string) {
+  public iniciarSesion(usuario: string, contrasenia: string) :boolean{
     let miUsuario: Array<IUsuario>;
+    let estado: boolean = false;
 
     // console.log(this.usuarios);
 
@@ -33,11 +34,11 @@ export class UsuarioService {
       if (this.usuarios[i].usuario == usuario && this.usuarios[i].contrasenia == contrasenia) {
         console.log(this.usuarios[i]);
         this.guardarUsuarioLogueado(this.usuarios[i]).subscribe(dato => {return})
-        
+        estado = true;
       }
       
-      
     }
+    return estado;
   }
 
   private guardarUsuarioLogueado(usuarioLog:IUsuario) {
@@ -56,21 +57,21 @@ export class UsuarioService {
   }
   public jefeProyecto(): Observable<IUsuario> {
     return this.client.get<IUsuario>(this.usuario_log, {
-      headers: {
-        "Content-type": "application/json"
-      }
+      headers: this.header
     });
   }
 
-  // public agregarUsuario(nuevoUsuario:IUsuario){
-  //   this.client.post(this.url,{
-  //     "id": nuevoUsuario.id,
-  //     "nombre": nuevoUsuario.nombre,
-  //     "apellido": nuevoUsuario.apellido,
-  //     "correo": nuevoUsuario.correo,
-  //     "telefono": nuevoUsuario.telefono,
-  //     "contrasenia": nuevoUsuario.contrasenia
-  //   })
+
+  /**
+   * cerrarSesion
+   */
+  public cerrarSesion() {
+    let cerrarCuenta:any = {};
+
+    return this.client.post(this.usuario_log, JSON.stringify(cerrarCuenta),{
+      headers: this.header
+    })
+  }
 
   public agregarUsuario(nuevoUsuario: IUsuario): Observable<IUsuario>{
     return this.client.post<IUsuario>(this.url, JSON.stringify(nuevoUsuario),{
@@ -78,5 +79,21 @@ export class UsuarioService {
         "Content-Type":"application/json"
       }
     })
+  }
+
+
+  /**
+   * comprobarLogueo
+   */
+  public comprobarLogueo(): boolean{
+    let usuarioLog:any = {}
+    let estado:boolean = false;
+    this.jefeProyecto().subscribe(dato => {console.log(dato)});
+
+    if (Object.keys(usuarioLog).length == 0) {
+      
+    }
+    console.log(usuarioLog);
+    return estado;
   }
 }

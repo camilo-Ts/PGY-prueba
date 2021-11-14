@@ -9,7 +9,7 @@ import { IUsuario } from 'src/interfaces/IUsuario';
 })
 
 export class RegisterComponent {
-public usuario: IUsuario={nombre:"", apellido:"", contrasenia:"",correo:"",telefono:0}
+public usuario: IUsuario={nombre:"", apellido:"", usuario:"", contrasenia:"",correo:"",telefono:0}
 public contrasenia2:""
 private usuarioService:UsuarioService
 constructor(private servicio:UsuarioService){

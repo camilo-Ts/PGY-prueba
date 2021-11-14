@@ -9,6 +9,15 @@
       "id": 2,
       "usuario": "Usuario2",
       "contrasenia": "123452"
+    },
+    {
+      "nombre": "Camilo",
+      "apellido": "Tapia Sepulveda",
+      "usuario": "CamiloTs",
+      "contrasenia": "12345",
+      "correo": "kmilox2000@gmail.com",
+      "telefono": 1232123,
+      "id": 3
     }
   ],
   "proyecto": [

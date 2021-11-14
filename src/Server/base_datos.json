@@ -1,17 +1,39 @@
 {
-    "usuario": [
-        {
-            "id": 1,
-            "usuario": "Usuario1",
-            "contrasenia": "12345"
-        }
-    ],
-    
-    "proyecto": [],
-    "usuario_log": {
-        "id": 1,
-        "usuario": "Usuario1",
-        "contrasenia": "12345"
+  "usuario": [
+    {
+      "id": 1,
+      "usuario": "Usuario1",
+      "contrasenia": "12345"
+    },
+    {
+      "id": 2,
+      "usuario": "Usuario2",
+      "contrasenia": "123452"
     }
+  ],
+  "proyecto": [
+    {
+      "nombre": "asd",
+      "descripcion": "asd",
+      "estado": true,
+      "fecha_in": "2021-11-14T05:51:28.738Z",
+      "fecha_fn": "2021-11-14T02:51:28.853-03:00",
+      "jefe_proy": 1,
+      "id": 1
+    },
+    {
+      "nombre": "asd",
+      "descripcion": "asd",
+      "estado": true,
+      "fecha_in": "2021-11-14T05:52:42.309Z",
+      "fecha_fn": "2021-11-14T02:52:42.456-03:00",
+      "jefe_proy": 1,
+      "id": 2
+    }
+  ],
+  "usuario_log": {
+    "id": 1,
+    "usuario": "Usuario1",
+    "contrasenia": "12345"
   }
-
+}

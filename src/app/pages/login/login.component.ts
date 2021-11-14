@@ -8,6 +8,11 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 
 export class LoginComponent {
+
+
+    public usuario:string;
+    public contrasenia:string;
+
     constructor( private servicio:UsuarioService){
 
     }
@@ -18,5 +23,9 @@ export class LoginComponent {
         // console.log(this.servicio.iniciarSesion("hola","hola").subscribe(m=>{console.log(m);
         // }));
         
+    }
+
+    public iniciarSesion(){
+        this.servicio.iniciarSesion(this.usuario, this.contrasenia);
     }
 }

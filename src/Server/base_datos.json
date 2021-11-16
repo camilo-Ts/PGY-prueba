@@ -12,70 +12,26 @@
         "descripcion": "asdasdasd",
         "proyectos": "Mis Proyectos"
       }
-    },
-    {
-      "id": 2,
-      "nombre": "Benjamin",
-      "apellido": "Tapia Sepulveda",
-      "usuario": "Usuario2",
-      "contrasenia": "123452",
-      "correo": "kmileox2000@gmail.com",
-      "telefono": 1232123,
-      "perfil": {
-        "descripcion": "",
-        "proyectos": ""
-      }
-    },
-    {
-      "nombre": "Camilo",
-      "apellido": "Tpia",
-      "usuario": "CamiloTs",
-      "contrasenia": "54321",
-      "correo": "kmilox2000@gmail.com",
-      "telefono": 12345678,
-      "perfil": {
-        "descripcion": "",
-        "proyectos": ""
-      },
-      "id": 3
     }
   ],
   "proyecto": [
     {
-      "nombre": "Camilo",
-      "descripcion": "Tapia",
+      "nombre": "Proyecto1",
+      "descripcion": "Descripcion 1",
       "estado": true,
-      "fecha_in": "2021-11-16T06:37:06.545Z",
-      "fecha_fn": "2021-11-16T03:37:06.635-03:00",
-      "jefe_proy": 3,
+      "fecha_in": "2021-11-16T21:49:55.164Z",
+      "fecha_fn": "2021-11-16T18:49:55.232-03:00",
+      "jefe_proy": 1,
       "id": 1
     },
     {
-      "nombre": "Proyecto 1",
-      "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "nombre": "Proyecto 2",
+      "descripcion": "Proyecto 2",
       "estado": true,
-      "fecha_in": "2021-11-16T18:52:23.444Z",
-      "fecha_fn": "2021-11-16T15:52:23.802-03:00",
+      "fecha_in": "2021-11-16T21:50:13.896Z",
+      "fecha_fn": "2021-11-16T18:50:13.909-03:00",
       "jefe_proy": 1,
       "id": 2
-    },
-    {
-      "nombre": "NUevo Proyecto",
-      "descripcion": "UN nuevo proyecto",
-      "estado": true,
-      "fecha_in": "2021-11-16T18:56:16.337Z",
-      "fecha_fn": "2021-11-16T15:56:16.403-03:00",
-      "jefe_proy": 1,
-      "id": 5
-    },
-    {
-      "nombre": "dasdas",
-      "descripcion": "asdas",
-      "estado": true,
-      "fecha_in": "2021-11-16T20:43:25.430Z",
-      "fecha_fn": "2021-11-16T17:43:25.500-03:00",
-      "jefe_proy": 2,
-      "id": 6
     }
   ],
   "usuario_log": {

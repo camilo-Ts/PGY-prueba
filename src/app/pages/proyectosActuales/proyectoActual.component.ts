@@ -31,5 +31,6 @@ export class ProyectoActualComponent {
     public eliminarProyecto(id:number) {
         console.log("Borraste el proyecto - "+id);
         this.servicio.eliminarProyecto(id);
+        window.location.reload();
     }
 }

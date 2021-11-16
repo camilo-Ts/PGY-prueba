@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { IUsuario } from 'src/interfaces/IUsuario';
 
@@ -13,7 +14,7 @@ export class RegisterComponent {
 
     public contrasenia2: ""
     private usuarioService: UsuarioService
-    constructor(private servicio: UsuarioService) {
+    constructor(private servicio: UsuarioService, private navCtr: NavController) {
         this.usuarioService = servicio;
     }
 
@@ -23,8 +24,8 @@ export class RegisterComponent {
         if (this.usuario.contrasenia === this.contrasenia2) {
 
             this.usuarioService.agregarUsuario(this.usuario).subscribe((respuesta) => { console.log(respuesta); });
-            alert("USUARIO REGISTRADO")
             this.estado = true;
+            this.navCtr.navigateForward('')
 
         }
         else { console.log("error", this.contrasenia2, this.usuario.contrasenia) }

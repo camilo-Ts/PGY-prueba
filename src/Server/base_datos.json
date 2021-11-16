@@ -25,57 +25,43 @@
         "descripcion": "",
         "proyectos": ""
       }
+    },
+    {
+      "nombre": "Camilo",
+      "apellido": "Tpia",
+      "usuario": "CamiloTs",
+      "contrasenia": "54321",
+      "correo": "kmilox2000@gmail.com",
+      "telefono": 12345678,
+      "perfil": {
+        "descripcion": "",
+        "proyectos": ""
+      },
+      "id": 3
     }
   ],
   "proyecto": [
     {
-      "nombre": "asd",
-      "descripcion": "asd",
-      "estado": true,
-      "fecha_in": "2021-11-14T05:51:28.738Z",
-      "fecha_fn": "2021-11-14T02:51:28.853-03:00",
-      "jefe_proy": 1,
-      "id": 1
-    },
-    {
-      "nombre": "asd",
-      "descripcion": "asd",
-      "estado": true,
-      "fecha_in": "2021-11-14T05:52:42.309Z",
-      "fecha_fn": "2021-11-14T02:52:42.456-03:00",
-      "jefe_proy": 1,
-      "id": 2
-    },
-    {
-      "nombre": "sgfsdf",
-      "descripcion": "dfsdfsdf",
-      "estado": true,
-      "fecha_in": "2021-11-15T13:40:50.276Z",
-      "fecha_fn": "2021-11-15T10:40:50.525-03:00",
-      "jefe_proy": 1,
-      "id": 3
-    },
-    {
       "nombre": "Camilo",
-      "descripcion": "Soy El Camilo",
+      "descripcion": "Tapia",
       "estado": true,
-      "fecha_in": "2021-11-16T01:15:17.899Z",
-      "fecha_fn": "2021-11-15T22:15:18.080-03:00",
-      "jefe_proy": 2,
-      "id": 4
+      "fecha_in": "2021-11-16T06:37:06.545Z",
+      "fecha_fn": "2021-11-16T03:37:06.635-03:00",
+      "jefe_proy": 3,
+      "id": 1
     }
   ],
   "usuario_log": {
-    "id": 1,
     "nombre": "Camilo",
-    "apellido": "Tapia Sepulveda",
-    "usuario": "Usuario1",
-    "contrasenia": "12345",
-    "corro": "kmileox2000@gmail.com",
-    "telefono": 1232123,
+    "apellido": "Tpia",
+    "usuario": "CamiloTs",
+    "contrasenia": "54321",
+    "correo": "kmilox2000@gmail.com",
+    "telefono": 12345678,
     "perfil": {
-      "descripcion": "asdasdasd",
+      "descripcion": "",
       "proyectos": ""
-    }
+    },
+    "id": 3
   }
 }

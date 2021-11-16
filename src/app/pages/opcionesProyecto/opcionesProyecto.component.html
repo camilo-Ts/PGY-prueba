@@ -4,22 +4,22 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <ion-button expand="block" class="botones-menu" href="nuevoProyecto">
+                <ion-button expand="block" class="botones-menu" (click)="irA('nuevoProyecto')">
                     Nuevo proyecto
                 </ion-button>
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <ion-button expand="block" class="botones-menu" href="proyectosAnteriores">
+                <ion-button disabled="true" expand="block" class="botones-menu" (click)="irA('proyectosAnteriores')">
                     Proyectos anteriores
                 </ion-button>
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <ion-button expand="block" class="botones-menu" href="proyectosActuales">
-                    Proyectos actuales
+                <ion-button expand="block" class="botones-menu" (click)="irA('proyectosActuales')">
+                    Mis proyectos
                 </ion-button>
             </ion-col>
         </ion-row>

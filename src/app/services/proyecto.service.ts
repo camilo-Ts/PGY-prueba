@@ -35,11 +35,10 @@ export class ProyectoService {
     })
   }
 
+  /**
+   * eliminarProyecto
+   */
+  public eliminarProyecto(id:number) {
+    this.client.delete(this.url+"/"+id, {headers:this.header})
+  }
 }
-
-
-//public agregarUsuario(nuevoUsuario: IUsuario): Observable<IUsuario>{
-  //return this.client.post<IUsuario>(this.url, JSON.stringify(nuevoUsuario),{
-    //headers: {
-      //"Content-Type":"application/json"
-    //}

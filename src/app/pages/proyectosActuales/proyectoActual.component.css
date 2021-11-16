@@ -3,3 +3,26 @@
     justify-content: center;
     align-items: center;
 }
+ion-card-title {
+    font-size: 15px;
+}
+
+ion-card-content {
+    font-size: 12px;
+}
+
+.boton-borrar {
+    background-color: #ff6961;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.boton-borrar span {
+    font-size: 24px;
+    color: #323232;
+    font-weight: 600;
+}

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector:'opcionesProyecto-app',
@@ -7,7 +8,11 @@ import {Component} from '@angular/core';
 })
 
 export class OpcionesProyectoComponent {
-    constructor() {
+    constructor(private navCtr:NavController) {
         
+    }
+
+    public irA(direccion:string){
+        this.navCtr.navigateForward(direccion);
     }
 }

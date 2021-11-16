@@ -99,6 +99,18 @@ const routes: Routes = [
     redirectTo:'home'
   },
   {
+    path: 'proyectosActuales/opcionesProyecto',
+    redirectTo:'opcionesProyecto'
+  },
+  {
+    path: 'proyectosActuales/home',
+    redirectTo:'home'
+  },
+  {
+    path: 'proyectosActuales/miPerfil',
+    redirectTo:'miPerfil'
+  },
+  {
     path: 'opcionesProyecto/miPerfil',
     redirectTo:'miPerfil'
   },

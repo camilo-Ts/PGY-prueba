@@ -13,8 +13,13 @@
 </ion-header>
 
 <ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <ion-grid>
-        <ion-row *ngFor="let item of proyectos|misProyectos:usuario.id">
+        <ion-row *ngFor="let proyecto of proyectos|misProyectos:usuario.id">
             <ion-col size="10" offset="1">
                 <ion-card native>
                     <ion-grid>
@@ -27,7 +32,7 @@
                             </ion-col>
                             <ion-col size="9">
                                 <ion-card-header>
-                                    <ion-card-title>Awesome Title</ion-card-title>
+                                    <ion-card-title>{{proyecto.nombre}}</ion-card-title>
                                 </ion-card-header>
                                 <ion-card-content>
                                     Rol y fechas del proyecto
@@ -39,6 +44,7 @@
             </ion-col>
         </ion-row>
     </ion-grid>
+
 </ion-content>
 
 <ion-footer>

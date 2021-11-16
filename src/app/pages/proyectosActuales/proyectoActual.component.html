@@ -5,7 +5,7 @@
                 <ion-icon slot="start" name="add"></ion-icon>
             </ion-back-button>
         </ion-buttons>
-        <ion-title>Proyectos Actuales</ion-title>
+        <ion-title>Mis Proyectos</ion-title>
         <ion-avatar slot="end">
             <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
         </ion-avatar>
@@ -15,7 +15,7 @@
 <ion-content>
     <ion-grid>
 
-        <ion-row *ngFor="let item of [1,2,3]">
+        <ion-row *ngFor="let proyecto of proyectos|misProyectos:usuario.id">
             <ion-col size="10" offset="1">
                 <ion-card native>
                     <ion-grid>
@@ -26,13 +26,16 @@
                                         src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
                                 </ion-avatar>
                             </ion-col>
-                            <ion-col size="9">
+                            <ion-col size="7">
                                 <ion-card-header>
-                                    <ion-card-title>Awesome Title</ion-card-title>
+                                    <ion-card-title>{{proyecto.nombre}}</ion-card-title>
                                 </ion-card-header>
                                 <ion-card-content>
-                                    Rol y fechas del proyecto
+                                    <span>Rol y fechas del proyecto</span>
                                 </ion-card-content>
+                            </ion-col>
+                            <ion-col (click)="eliminarProyecto(proyecto.id)" class="boton-borrar" size="2">
+                                <span>X</span>
                             </ion-col>
                         </ion-row>
                     </ion-grid>

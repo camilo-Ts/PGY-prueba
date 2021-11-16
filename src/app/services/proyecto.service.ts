@@ -39,6 +39,9 @@ export class ProyectoService {
    * eliminarProyecto
    */
   public eliminarProyecto(id:number) {
-    this.client.delete(this.url+"/"+id, {headers:this.header})
+    this.client.delete(this.url+"/"+id, {headers:this.header}).subscribe(()=> {return})
+
+    // console.log(this.url+"/"+id);
+    
   }
 }

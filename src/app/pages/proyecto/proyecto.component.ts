@@ -39,7 +39,7 @@ export class ProyectoComponent{
     async presentLoading() {
         this.tiempoLoading = await this.loading.create({
             cssClass: 'my-custom-class',
-            message: 'Please wait...',
+            message: 'Cargando proyecto...',
             duration: 1000
         });
         this.tiempoLoading.present();

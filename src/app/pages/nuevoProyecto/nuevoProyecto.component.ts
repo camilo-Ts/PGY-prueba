@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { IProyecto } from 'src/interfaces/IProyecto';
@@ -16,7 +17,7 @@ export class NuevoProyectoComponent {
     private proyectoService: ProyectoService
     private usuarioService: UsuarioService
 
-    constructor(private servicio: ProyectoService, private usuarioServicio: UsuarioService) {
+    constructor(private servicio: ProyectoService, private usuarioServicio: UsuarioService, private navCtr:NavController) {
         this.proyectoService = servicio;
         this.usuarioService = usuarioServicio;
     }
@@ -34,9 +35,9 @@ export class NuevoProyectoComponent {
     public agregarProyecto() {
         // let jefeProyecto: IUsuario;
         this.proyectoService.listarProyectos().subscribe(datos => {this.proyecto.id = datos.length + 1})
-        
-
         this.proyectoService.agregarProyecto(this.proyecto).subscribe(dato=>{console.log(dato)});
+
+        this.navCtr.navigateForward("proyectosActuales");
     }
 
     /**
@@ -53,5 +54,9 @@ export class NuevoProyectoComponent {
     public cambiarFechaFin(event) {
         this.proyecto.fecha_fn = event.detail.value;
 
+    }
+
+    public volver(){
+        this.navCtr.navigateBack("opcionesProyecto");
     }
 }

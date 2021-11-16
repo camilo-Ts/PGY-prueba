@@ -27,6 +27,7 @@ import { ProyectoComponent } from './pages/proyecto/proyecto.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MisProyectosPipe } from './pipes/proyectos/mis-proyectos.pipe';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MisProyectosPipe } from './pipes/proyectos/mis-proyectos.pipe';
     PasswordComponent,
     OpcionesProyectoComponent,
     ProyectoComponent,
+    EditarPerfilComponent,
     MisProyectosPipe,
   ],
   entryComponents: [],

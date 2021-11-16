@@ -12,6 +12,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProyecto.component';
 import { ProyectoComponent } from './pages/proyecto/proyecto.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 
 const routes: Routes = [
@@ -113,6 +114,10 @@ const routes: Routes = [
   {
     path: 'opcionesProyecto/miPerfil',
     redirectTo:'miPerfil'
+  },
+  {
+    path: 'modificarPerfil',
+    component:EditarPerfilComponent
   },
   {
     path:'proyecto/:id',

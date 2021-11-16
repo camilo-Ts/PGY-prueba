@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { LoadingController, NavController } from '@ionic/angular';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -10,11 +10,11 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 
 export class LoginComponent {
 
-
+    private tiempoLoading:any;
     public usuario:string;
     public contrasenia:string;
 
-    constructor( private servicio:UsuarioService, private navCtr:NavController){
+    constructor( private servicio:UsuarioService, private navCtr:NavController, public loading: LoadingController){
 
     }
 
@@ -35,8 +35,18 @@ export class LoginComponent {
         estado = this.servicio.iniciarSesion(this.usuario, this.contrasenia);
         
         if (estado) {
+            this.presentLoading();
             this.navCtr.navigateForward('home');
         }
         
+    }
+
+    async presentLoading() {
+        this.tiempoLoading = await this.loading.create({
+            cssClass: 'my-custom-class',
+            message: 'Iniciando sesion...',
+            duration: 1000
+        });
+        this.tiempoLoading.present();
     }
 }

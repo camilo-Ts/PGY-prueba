@@ -41,7 +41,7 @@ export class UsuarioService {
     return estado;
   }
 
-  private guardarUsuarioLogueado(usuarioLog:IUsuario) {
+  public guardarUsuarioLogueado(usuarioLog:IUsuario) {
     return this.client.post<IUsuario>(this.usuario_log, JSON.stringify(usuarioLog), {
       headers: this.header
     })
@@ -104,5 +104,26 @@ export class UsuarioService {
     // }
     console.log(estado);
     return estado;
+  }
+
+
+  /**
+   * editarPerfil
+   */
+  public editarPerfil(usuario:IUsuario):Observable<IUsuario> {
+    console.log(this.url+'/'+usuario.id);
+
+    return this.client.put<IUsuario>(this.url+'/'+usuario.id, usuario, {
+      headers:this.header
+    })
+  }
+
+  /**
+   * editarUsuarioLog
+   */
+  public editarUsuarioLog(usuario:IUsuario):Observable<IUsuario> {
+    return this.client.put<IUsuario>(this.usuario_log, usuario, {
+      headers:this.header
+    })
   }
 }

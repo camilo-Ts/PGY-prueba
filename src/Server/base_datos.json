@@ -2,15 +2,15 @@
   "usuario": [
     {
       "id": 1,
-      "nombre": "Camilo",
+      "nombre": "CamiloTs",
       "apellido": "Tapia Sepulveda",
       "usuario": "Usuario1",
       "contrasenia": "12345",
-      "corro": "kmileox2000@gmail.com",
+      "correo": "kmileox2000@gmail.com",
       "telefono": 1232123,
       "perfil": {
         "descripcion": "asdasdasd",
-        "proyectos": ""
+        "proyectos": "Mis Proyectos"
       }
     },
     {
@@ -19,7 +19,7 @@
       "apellido": "Tapia Sepulveda",
       "usuario": "Usuario2",
       "contrasenia": "123452",
-      "corro": "kmileox2000@gmail.com",
+      "correo": "kmileox2000@gmail.com",
       "telefono": 1232123,
       "perfil": {
         "descripcion": "",
@@ -49,19 +49,46 @@
       "fecha_fn": "2021-11-16T03:37:06.635-03:00",
       "jefe_proy": 3,
       "id": 1
+    },
+    {
+      "nombre": "Proyecto 1",
+      "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "estado": true,
+      "fecha_in": "2021-11-16T18:52:23.444Z",
+      "fecha_fn": "2021-11-16T15:52:23.802-03:00",
+      "jefe_proy": 1,
+      "id": 2
+    },
+    {
+      "nombre": "NUevo Proyecto",
+      "descripcion": "UN nuevo proyecto",
+      "estado": true,
+      "fecha_in": "2021-11-16T18:56:16.337Z",
+      "fecha_fn": "2021-11-16T15:56:16.403-03:00",
+      "jefe_proy": 1,
+      "id": 5
+    },
+    {
+      "nombre": "dasdas",
+      "descripcion": "asdas",
+      "estado": true,
+      "fecha_in": "2021-11-16T20:43:25.430Z",
+      "fecha_fn": "2021-11-16T17:43:25.500-03:00",
+      "jefe_proy": 2,
+      "id": 6
     }
   ],
   "usuario_log": {
-    "nombre": "Camilo",
-    "apellido": "Tpia",
-    "usuario": "CamiloTs",
-    "contrasenia": "54321",
-    "correo": "kmilox2000@gmail.com",
-    "telefono": 12345678,
+    "id": 1,
+    "nombre": "CamiloTs",
+    "apellido": "Tapia Sepulveda",
+    "usuario": "Usuario1",
+    "contrasenia": "12345",
+    "correo": "kmileox2000@gmail.com",
+    "telefono": 1232123,
     "perfil": {
-      "descripcion": "",
-      "proyectos": ""
-    },
-    "id": 3
+      "descripcion": "asdasdasd",
+      "proyectos": "Mis Proyectos"
+    }
   }
 }

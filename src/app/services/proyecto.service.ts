@@ -29,6 +29,12 @@ export class ProyectoService {
     })
   }
 
+  public traerProyecto(id:number): Observable<IProyecto>{
+    return this.client.get<IProyecto>(this.url+"/"+id,{
+      headers:this.header
+    })
+  }
+
 }
 
 

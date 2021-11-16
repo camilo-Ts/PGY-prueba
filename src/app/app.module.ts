@@ -26,6 +26,7 @@ import { OpcionesProyectoComponent } from './pages/opcionesProyecto/opcionesProy
 import { ProyectoComponent } from './pages/proyecto/proyecto.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MisProyectosPipe } from './pipes/proyectos/mis-proyectos.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent, 
     PasswordComponent,
     OpcionesProyectoComponent,
-    ProyectoComponent
+    ProyectoComponent,
+    MisProyectosPipe,
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, CommonModule, FormsModule],

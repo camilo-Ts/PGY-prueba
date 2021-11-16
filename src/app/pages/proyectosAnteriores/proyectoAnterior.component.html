@@ -14,32 +14,7 @@
 
 <ion-content>
     <ion-grid>
-<!--         
-        <ion-row>
-            <ion-col size="10" offset="1">
-                <ion-card native>
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col size="3" class="logo-proyecto">
-                                <ion-avatar>
-                                    <img
-                                        src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
-                                </ion-avatar>
-                            </ion-col>
-                            <ion-col size="9">
-                                <ion-card-header>
-                                    <ion-card-title>Awesome Title</ion-card-title>
-                                </ion-card-header>
-                                <ion-card-content>
-                                    Descripcion del proyecto
-                                </ion-card-content>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-card>
-            </ion-col>
-        </ion-row> -->
-        <ion-row *ngFor="let item of [1,2,3]">
+        <ion-row *ngFor="let item of proyectos|misProyectos:usuario.id">
             <ion-col size="10" offset="1">
                 <ion-card native>
                     <ion-grid>

@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import { ProyectoService } from 'src/app/services/proyecto.service';
+import { IProyecto } from 'src/interfaces/IProyecto';
 
 @Component({
     selector:'proyectoAnterior-app',
@@ -7,7 +9,14 @@ import {Component} from '@angular/core';
 })
 
 export class ProyectoAnteriorComponent {
-    constructor() {
+    public proyectos:Array<IProyecto> = [];
+
+    public usuario:any = {id:1}
+    constructor(private servicio:ProyectoService) {
         
+    }
+
+    ngOnInit(){
+        this.servicio.listarProyectos().subscribe((datos:Array<IProyecto>)=>{ this.proyectos = datos})
     }
 }

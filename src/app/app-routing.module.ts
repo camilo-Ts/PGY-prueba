@@ -103,7 +103,7 @@ const routes: Routes = [
     redirectTo:'miPerfil'
   },
   {
-    path:'proyecto',
+    path:'proyecto/:id',
     component:ProyectoComponent
   },
   

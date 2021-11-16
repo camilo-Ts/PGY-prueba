@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Observable } from 'rxjs';
+import { ProyectoService } from 'src/app/services/proyecto.service';
+import { IProyecto } from 'src/interfaces/IProyecto';
 
 @Component({
     selector: 'principal-app',
@@ -8,10 +11,21 @@ import { NavController } from '@ionic/angular';
 })
 
 export class PrincipalComponent {
-    constructor(private navCtr: NavController) {
+
+    public proyectos:Observable<any>;
+
+    constructor(private navCtr: NavController, private servicio:ProyectoService) {
         
     }
-    cambiarPagina(){
-        this.navCtr.navigateForward('/proyecto');
+    ngOnInit(){
+
+        this.proyectos = this.servicio.listarProyectos();
+        
+
+    }
+
+
+    cambiarPagina(id:number){
+        this.navCtr.navigateForward('/proyecto/'+id);
     }
 }

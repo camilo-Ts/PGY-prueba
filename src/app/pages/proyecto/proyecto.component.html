@@ -3,11 +3,12 @@
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
         </ion-buttons>
-        <ion-title>Nombre del proyecto</ion-title>
+        <ion-title>{{proyecto.nombre}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <!-- <ion-title *ngIf="!proyecto">{{Title}}</ion-title> -->
     <ion-grid>
         <ion-row>
             <ion-col class="columna-imagen" size="10" offset="1">
@@ -26,9 +27,7 @@
                     </ion-row>
                     <ion-row>
                         <ion-col class="descripcion-proyecto-contenido" size="12">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo accusantium quasi asperiores?
-                            Provident praesentium explicabo voluptas porro officiis vitae iste veniam commodi at. Minus
-                            nisi alias quos eius, officia voluptas!
+                            {{proyecto.descripcion}}
                         </ion-col>
                     </ion-row>
                 </ion-grid>

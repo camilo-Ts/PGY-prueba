@@ -5,5 +5,9 @@ export interface IUsuario {
     usuario:string,
     correo:string,
     telefono:number,
-    contrasenia:string
+    contrasenia:string,
+    perfil:{
+        descripcion:string,
+        proyectos:string
+    }
 }

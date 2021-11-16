@@ -23,6 +23,8 @@ export class LoginComponent {
         // }));
         // console.log(this.servicio.iniciarSesion("hola","hola").subscribe(m=>{console.log(m);
         // }));
+        console.log(this.servicio.comprobarLogueo());
+        
         this.servicio.comprobarLogueo();
         
     }

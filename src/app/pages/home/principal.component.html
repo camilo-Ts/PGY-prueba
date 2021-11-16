@@ -6,9 +6,9 @@
 
   <!-- Proyectos en formato de carta dentro de un ion-grid -->
   <ion-grid>
-    <ion-row *ngFor="let item of [1,2,3]">
+    <ion-row *ngFor="let proyecto of proyectos |async">
       <ion-col size="10" offset="1">
-        <ion-card native (click)="cambiarPagina()">
+        <ion-card native (click)="cambiarPagina(proyecto.id)">
           <ion-grid>
             <ion-row>
               <ion-col size="4" id="logo-proyecto">
@@ -18,10 +18,10 @@
               </ion-col>
               <ion-col size="8">
                 <ion-card-header>
-                  <ion-card-title>Awesome Title</ion-card-title>
+                  <ion-card-title>{{proyecto.nombre}}</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                  Awesome content
+                  {{proyecto.descripcion}}
                 </ion-card-content>
               </ion-col>
             </ion-row>

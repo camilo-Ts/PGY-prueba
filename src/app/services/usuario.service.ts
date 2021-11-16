@@ -55,6 +55,8 @@ export class UsuarioService {
       headers: this.header
     }).subscribe((datos: Array<IUsuario>) => { this.usuarios = datos })
   }
+
+  
   public jefeProyecto(): Observable<IUsuario> {
     return this.client.get<IUsuario>(this.usuario_log, {
       headers: this.header
@@ -86,14 +88,21 @@ export class UsuarioService {
    * comprobarLogueo
    */
   public comprobarLogueo(): boolean{
-    let usuarioLog:any = {}
     let estado:boolean = false;
-    this.jefeProyecto().subscribe(dato => {console.log(dato)});
 
-    if (Object.keys(usuarioLog).length == 0) {
+    this.jefeProyecto().subscribe(dato => {
       
-    }
-    console.log(usuarioLog);
+      // console.log(Object.keys(dato).length)
+      if (Object.keys(dato).length > 0) {
+        estado = true;
+      }
+    
+    });
+
+    // if (Object.keys(usuarioLog).length > 0) {
+    //   estado = true;
+    // }
+    console.log(estado);
     return estado;
   }
 }

@@ -9,36 +9,38 @@ import { IUsuario } from 'src/interfaces/IUsuario';
 })
 
 export class RegisterComponent {
-public usuario: IUsuario={nombre:"", apellido:"", usuario:"", contrasenia:"",correo:"",telefono:0}
-public contrasenia2:""
-private usuarioService:UsuarioService
-constructor(private servicio:UsuarioService){
-    this.usuarioService = servicio;
-}
+    public usuario: IUsuario = { nombre: "", apellido: "", usuario: "", contrasenia: "", correo: "", telefono: 0, perfil: { descripcion: "", proyectos: "" } }
 
-private estado:boolean=false;
-
-public registrarUsuario(){
-    if (this.usuario.contrasenia===this.contrasenia2){
-        this.usuarioService.agregarUsuario(this.usuario).subscribe((respuesta)=>{ console.log(respuesta);});
-        alert ("USUARIO REGISTRADO")
-        this.estado=true;
-        
+    public contrasenia2: ""
+    private usuarioService: UsuarioService
+    constructor(private servicio: UsuarioService) {
+        this.usuarioService = servicio;
     }
-    else{console.log("error",this.contrasenia2,this.usuario.contrasenia)}
 
-}
+    private estado: boolean = false;
 
-// public registrarUsuario(){
-//     let nuevoUsuario: IUsuario={
-//         id:0,
-//         nombre:this.nombre,
-//         apellido:this.apellido,
-//         contrasenia: this.contrasenia,
-//         correo: this.correo,
-//         telefono: 12345
-//     }
-//     this.servicio.agregarUsuario(nuevoUsuario)
-//     console.log(nuevoUsuario)
-// }
+    public registrarUsuario() {
+        if (this.usuario.contrasenia === this.contrasenia2) {
+
+            this.usuarioService.agregarUsuario(this.usuario).subscribe((respuesta) => { console.log(respuesta); });
+            alert("USUARIO REGISTRADO")
+            this.estado = true;
+
+        }
+        else { console.log("error", this.contrasenia2, this.usuario.contrasenia) }
+
+    }
+
+    // public registrarUsuario(){
+    //     let nuevoUsuario: IUsuario={
+    //         id:0,
+    //         nombre:this.nombre,
+    //         apellido:this.apellido,
+    //         contrasenia: this.contrasenia,
+    //         correo: this.correo,
+    //         telefono: 12345
+    //     }
+    //     this.servicio.agregarUsuario(nuevoUsuario)
+    //     console.log(nuevoUsuario)
+    // }
 }

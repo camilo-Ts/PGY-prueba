@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { IUsuario } from 'src/interfaces/IUsuario';
 
 @Component({
     selector:'miPerfil-app',
@@ -7,7 +9,14 @@ import {Component} from '@angular/core';
 })
 
 export class MiPerfilComponent {
-    constructor() {
+
+    public usuario: IUsuario={nombre:"", apellido:"", usuario:"", contrasenia:"",correo:"",telefono:0, perfil:{descripcion:"",proyectos:""}}
+
+    constructor(private servicio:UsuarioService) {
         
+    }
+
+    ngOnInit(){
+        this.servicio.jefeProyecto().subscribe(data => {this.usuario = data, console.log(this.usuario)})
     }
 }

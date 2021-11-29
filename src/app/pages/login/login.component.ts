@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingController, NavController } from '@ionic/angular';
+import { LoadingController, MenuController, NavController } from '@ionic/angular';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class LoginComponent {
     public usuario:string;
     public contrasenia:string;
 
-    constructor( private servicio:UsuarioService, private navCtr:NavController, public loading: LoadingController){
+    constructor( private servicio:UsuarioService, private navCtr:NavController, public loading: LoadingController, private menuCtr:MenuController){
 
     }
 
@@ -26,6 +26,8 @@ export class LoginComponent {
         console.log(this.servicio.comprobarLogueo());
         
         this.servicio.comprobarLogueo();
+
+        this.menuCtr.enable(false, "first");
         
     }
 

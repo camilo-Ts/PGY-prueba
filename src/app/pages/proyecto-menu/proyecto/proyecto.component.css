@@ -1,0 +1,39 @@
+.pagina{
+    height: 95%;
+    margin: 10px 7px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0 2px 4px -2px;
+}
+
+ion-text h1 {
+    text-align: center;
+}
+
+.descripcion{
+    border: 1px solid #AEAEAE;
+    border-radius: 5px;
+}
+
+.descripcion ion-grid .tituloDescripcion h5{
+    margin: 0;
+}
+
+.descripcionContenido ion-col p {
+    margin: 0;
+}
+
+
+.filaEnBlanco ion-col{
+    height: 50px;
+}
+
+.filaProgreso ion-text p {
+    color: #696969;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.contenidoProgreso ion-col{
+    margin: auto;
+    font-size: 15px;
+}

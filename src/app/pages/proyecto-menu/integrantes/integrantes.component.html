@@ -1,0 +1,60 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="abrirMenu()">
+        <ion-icon slot="start" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Integrantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pagina ion-padding">
+    <ion-grid >
+      <ion-row class="subrayado">
+        <ion-col size="8">
+          <p>Nombre</p>
+        </ion-col>
+        <ion-col class="columnaRol" size="4">
+          <p>Rol</p>
+        </ion-col>
+      </ion-row>
+      <!-- Espacio vacio -->
+      <ion-row>
+        <ion-col size="12"></ion-col>
+      </ion-row>
+
+      <ion-row class="subrayadoIntegrantes">
+        <ion-col size="8">
+          <p>Camilo Tapia</p>
+        </ion-col>
+        <ion-col size="4">
+          <p>Jefe de proyecto</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="subrayadoIntegrantes">
+        <ion-col size="8">
+          <p>Camilo Tapia</p>
+        </ion-col>
+        <ion-col size="4">
+          <p>Jefe de proyecto</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12"></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button (click)="onClick()" expand="block" shape="round">
+            Invitar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+  </div>
+</ion-content>

@@ -21,6 +21,12 @@ export class UsuarioService {
   }
   // Metodos
 
+  public getUsuarios():Observable<Array<IUsuario>>{
+    return this.client.get<Array<IUsuario>>(this.url,{
+      headers:this.header
+    })
+  }
+
   /**
    * iniciarSesion
    */

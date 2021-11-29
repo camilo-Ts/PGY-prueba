@@ -28,6 +28,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MisProyectosPipe } from './pipes/proyectos/mis-proyectos.pipe';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { ProyectoMenuModule } from './pages/proyecto-menu/proyecto-menu.module';
 
 @NgModule({
   declarations: [
@@ -49,10 +50,11 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
     OpcionesProyectoComponent,
     ProyectoComponent,
     EditarPerfilComponent,
+    // ProyectoMenuComponent,
     MisProyectosPipe,
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, CommonModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, CommonModule, FormsModule, ProyectoMenuModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

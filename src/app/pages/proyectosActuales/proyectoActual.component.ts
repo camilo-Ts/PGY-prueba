@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { IProyecto } from 'src/interfaces/IProyecto';
@@ -14,7 +15,7 @@ export class ProyectoActualComponent {
     public proyectos: Array<IProyecto> = [];
 
     public usuario: IUsuario = { id: 0, nombre: "", apellido: "", usuario: "", contrasenia: "", correo: "", telefono: 0, perfil: { descripcion: "", proyectos: "" } }
-    constructor(private servicio: ProyectoService, private servicioUsuario: UsuarioService) {
+    constructor(private servicio: ProyectoService, private servicioUsuario: UsuarioService, private navCtr: NavController) {
 
     }
 
@@ -23,6 +24,10 @@ export class ProyectoActualComponent {
         this.servicio.listarProyectos().subscribe((datos: Array<IProyecto>) => { this.proyectos = datos })
         // console.log(this.usuario.id);
 
+    }
+
+    public abrirProyecto(id:number){
+        this.navCtr.navigateForward("home");
     }
 
     /**

@@ -1,7 +1,7 @@
 <ion-header class="ion-padding">
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button defaultHref="/" color="primary">
+            <ion-back-button defaultHref="opcionesProyecto" color="primary">
                 <ion-icon slot="start" name="add"></ion-icon>
             </ion-back-button>
         </ion-buttons>
@@ -26,7 +26,7 @@
                                         src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
                                 </ion-avatar>
                             </ion-col>
-                            <ion-col size="7">
+                            <ion-col size="7" (click)="abrirProyecto(proyecto.id)">
                                 <ion-card-header>
                                     <ion-card-title>{{proyecto.nombre}}</ion-card-title>
                                 </ion-card-header>
@@ -42,7 +42,6 @@
                 </ion-card>
             </ion-col>
         </ion-row>
-        
     </ion-grid>
 </ion-content>
 

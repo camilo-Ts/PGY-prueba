@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="abrirMenu()">
+        <ion-icon slot="start" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Integrantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pagina ion-padding">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Seleccione un Usuario</ion-label>
+            <ion-select>
+              <ion-select-option value="{{usuario}}" *ngFor="let usuario of usuarios">{{usuario.usuario}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Rol</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button (click)="onClick()" expand="block" shape="round">
+            Volver
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button (click)="onClick()" expand="block" shape="round">
+            Invitar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

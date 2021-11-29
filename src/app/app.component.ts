@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UsuarioService } from './services/usuario.service';
 
 @Component({
@@ -7,8 +8,12 @@ import { UsuarioService } from './services/usuario.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private servicioUsuario: UsuarioService) {}
+  constructor(private servicioUsuario: UsuarioService, private parametroUrl:ActivatedRoute) {}
 
+  ngOnInit(){
+    console.log(document.location.href  );
+    
+  }
   /**
    * cerrarSesion
    */
@@ -16,3 +21,4 @@ export class AppComponent {
     this.servicioUsuario.cerrarSesion().subscribe(dato=>{return})
   }
 }
+

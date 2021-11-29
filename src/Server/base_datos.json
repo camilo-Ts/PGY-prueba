@@ -12,6 +12,19 @@
         "descripcion": "asdasdasd",
         "proyectos": "Mis Proyectos"
       }
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Retamales",
+      "usuario": "ReneTamales",
+      "contrasenia": "1234567",
+      "correo": "rene@duoc.cl",
+      "telefono": 12345678,
+      "perfil": {
+        "descripcion": "Otra descripción",
+        "proyectos": "Otra Proyecto"
+      },
+      "id": 2
     }
   ],
   "proyecto": [

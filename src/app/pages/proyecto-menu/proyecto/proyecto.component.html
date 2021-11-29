@@ -1,0 +1,96 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="abrirMenu()">
+        <ion-icon slot="start" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>proyecto.nombre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pagina">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-padding" size="12"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-text class="espacio">
+            <h1>Titulo del proyecto</h1>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-padding" size="12"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <div class="descripcion">
+            <ion-grid >
+              <ion-row>
+                <ion-col class="tituloDescripcion" size="12">
+                  <ion-text>
+                    <h5>descripción</h5>
+                  </ion-text>
+                </ion-col>
+              </ion-row>
+              <ion-row class="descripcionContenido">
+                <ion-col size="12">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere magnam velit, odio soluta perspiciatis ducimus eius beatae, est asperiores voluptates illo id quo aspernatur officiis, distinctio maxime iure. Cumque. <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere magnam velit, odio soluta perspiciatis ducimus eius beatae, est asperiores voluptates illo id quo aspernatur officiis, distinctio maxime iure. Cumque.
+                  </p>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="filaEnBlanco">
+        <ion-col size="12"></ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col size="12">
+          <ion-grid >
+            <ion-row>
+              <ion-col class="filaProgreso" size="12">
+                <ion-text>
+                <p>Progreso</p>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row class="contenidoProgreso">
+
+              <ion-col size="10" *ngIf="progreso <= 0.3">
+                <ion-progress-bar color="danger" value="{{progreso}}">asd</ion-progress-bar>
+              </ion-col>
+              <ion-col size="10" *ngIf="progreso > 0.3 && progreso < 0.7">
+                <ion-progress-bar value="{{progreso}}">asd</ion-progress-bar>
+              </ion-col>
+              <ion-col size="10" *ngIf="progreso >= 0.7">
+                <ion-progress-bar color="success" value="{{progreso}}">asd</ion-progress-bar>
+              </ion-col>
+
+
+              <ion-col size="2">
+                {{progreso * 100}}%
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+      <ion-row class="filaEnBlanco">
+        <ion-col size="12"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

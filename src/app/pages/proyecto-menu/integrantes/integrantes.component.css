@@ -1,0 +1,27 @@
+.pagina{
+    height: 95%;
+    margin: 10px 7px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0 2px 4px -2px;
+}
+
+.subrayadoIntegrantes,
+.subrayado{
+    border-bottom: 1px solid #BCBCBC;
+}
+
+.subrayado ion-col,
+.subrayado ion-col p {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.columnaRol {
+    border-left: 1px solid #BCBCBC;
+    text-align: center;
+}
+
+.subrayadoIntegrantes ion-col p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

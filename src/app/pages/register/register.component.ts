@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { IUsuario } from 'src/interfaces/IUsuario';
 
@@ -14,17 +14,23 @@ export class RegisterComponent {
 
     public contrasenia2: ""
     private usuarioService: UsuarioService
-    constructor(private servicio: UsuarioService, private navCtr: NavController) {
+    private estado: boolean = false;
+    
+    constructor(private servicio: UsuarioService, private navCtr: NavController, private menuCtr:MenuController) {
         this.usuarioService = servicio;
     }
 
-    private estado: boolean = false;
+    ngOnInit(){
+        this.menuCtr.enable(false, "first");
+    }
+
 
     public registrarUsuario() {
         if (this.usuario.contrasenia === this.contrasenia2) {
 
             this.usuarioService.agregarUsuario(this.usuario).subscribe((respuesta) => { console.log(respuesta); });
             this.estado = true;
+            this.servicio.listarUsuarios();
             this.navCtr.navigateForward('')
 
         }

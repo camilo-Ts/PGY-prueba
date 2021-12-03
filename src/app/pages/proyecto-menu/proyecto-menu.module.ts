@@ -14,7 +14,7 @@ import { InvitarUsuarioComponent } from './invitarUsuario/invitarUsuario.compone
 
 
 @NgModule({
-  declarations: [ProyectoComponent, IntegrantesComponent, InvitarUsuarioComponent],
+  declarations: [ProyectoComponent, IntegrantesComponent],
   imports: [
     // BrowserModule,
     CommonModule,

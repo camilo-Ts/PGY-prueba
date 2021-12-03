@@ -29,6 +29,7 @@ import { FormsModule } from '@angular/forms';
 import { MisProyectosPipe } from './pipes/proyectos/mis-proyectos.pipe';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 import { ProyectoMenuModule } from './pages/proyecto-menu/proyecto-menu.module';
+import { InvitarUsuarioComponent } from './pages/proyecto-menu/invitarUsuario/invitarUsuario.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ProyectoMenuModule } from './pages/proyecto-menu/proyecto-menu.module';
     EditarPerfilComponent,
     // ProyectoMenuComponent,
     MisProyectosPipe,
+    InvitarUsuarioComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, CommonModule, FormsModule, ProyectoMenuModule],

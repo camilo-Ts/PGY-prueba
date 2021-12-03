@@ -12,7 +12,7 @@ import { IUsuario } from 'src/interfaces/IUsuario';
 export class InvitarUsuarioComponent implements OnInit {
 
   public usuarios:Array<IUsuario> =[]
-  public nuevoIntegrante: IIntegrante;;
+  public nuevoIntegrante: IIntegrante ={nombre:"",rol:""};
   public integrantes:Array<IIntegrante>;
   public proyecto:IProyecto;
 
@@ -23,12 +23,13 @@ export class InvitarUsuarioComponent implements OnInit {
   constructor(private servicioUsuario:UsuarioService, private servicioProyecto:ProyectoService) { }
 
   ngOnInit() {
-    // this.servicioProyecto.traerProyecto(1).subscribe(data => { this.integrantes = data.integrantes, this.proyecto = data})
+    //this.servicioProyecto.traerProyecto(1).subscribe(data => { this.integrantes = data.integrantes, this.proyecto = data})
 
-    // this.servicioUsuario.getUsuarios().subscribe(data => {this.usuarios = data})
+    this.servicioUsuario.getUsuarios().subscribe(data => {this.usuarios = data})
   }
 
   public modificarNombre(evento){
+    console.log(evento);
     this.nuevoIntegrante.nombre=evento.detail.value;
   }
 

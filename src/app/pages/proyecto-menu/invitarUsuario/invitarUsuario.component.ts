@@ -28,7 +28,12 @@ export class InvitarUsuarioComponent implements OnInit {
     // this.servicioUsuario.getUsuarios().subscribe(data => {this.usuarios = data})
   }
 
+  public modificarNombre(evento){
+    this.nuevoIntegrante.nombre=evento.detail.value;
+  }
+
   public agregar(){
+    console.log(this.nuevoIntegrante);
     // this.proyecto.integrantes.push(this.nuevoIntegrante)
     // this.servicioProyecto.modificarProyecto(1, this.proyecto).subscribe(data=>{return})
   }

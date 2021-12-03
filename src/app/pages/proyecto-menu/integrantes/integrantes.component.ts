@@ -17,7 +17,7 @@ export class IntegrantesComponent implements OnInit {
     this.menuCtr.enable(true, "menuProyecto");
     // this.menuCtr.enable(true, "menuProyecto");
 
-    // this.servicioProyecto.traerProyecto(parseInt(window.localStorage.getItem("idProyecto"))).subscribe(data => { this.integrantes = data.integrantes })
+    this.servicioProyecto.traerProyecto(parseInt(window.localStorage.getItem("idProyecto"))).subscribe(data => { this.integrantes = data.integrantes })
     // console.log();
     
   }

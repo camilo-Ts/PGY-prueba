@@ -14,7 +14,7 @@ export class InvitarUsuarioComponent implements OnInit {
   public usuarios:Array<IUsuario> =[]
   public nuevoIntegrante: IIntegrante ={nombre:"",rol:""};
   public integrantes:Array<IIntegrante>;
-  public proyecto:IProyecto;
+  public proyecto:IProyecto = { nombre: "", descripcion: "", estado: true, fecha_in: new Date(), fecha_fn: new Date(), jefe_proy: 0 , integrantes:[]};
 
   // prueba
   public objeto:Array<any>;
@@ -35,7 +35,7 @@ export class InvitarUsuarioComponent implements OnInit {
 
   public agregar(){
     console.log(this.nuevoIntegrante);
-    // this.proyecto.integrantes.push(this.nuevoIntegrante)
-    // this.servicioProyecto.modificarProyecto(1, this.proyecto).subscribe(data=>{return})
+    this.proyecto.integrantes.push(this.nuevoIntegrante)
+    this.servicioProyecto.modificarProyecto(parseInt(window.localStorage.getItem("idProyecto")), this.proyecto).subscribe(data=>{return})
   }
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IProyecto } from 'src/interfaces/IProyecto';
+import { IIntegrante, IProyecto } from 'src/interfaces/IProyecto';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,9 @@ export class ProyectoService {
     })
   }
 
+  /**
+   * Trae de la api el proyecto que le indique con la id
+   */
   public traerProyecto(id:number): Observable<IProyecto>{
     return this.client.get<IProyecto>(this.url+"/"+id,{
       headers:this.header
@@ -48,6 +51,22 @@ export class ProyectoService {
   public miProyecto(nuevoProyecto:IProyecto): Observable<IProyecto>{
     return this.client.post<IProyecto>("http://localhost:3000/miProyecto", JSON.stringify(nuevoProyecto), {
       headers: this.header
+    })
+  }
+
+
+  /**
+   * name
+   */
+  public agregarIntegrante(integrantes:Array<IIntegrante>, idProyecto:number):Observable<IIntegrante> {
+    return this.client.patch<IIntegrante>(this.url+"/"+idProyecto, integrantes,{
+      headers:this.header
+    })
+  }
+
+  public modificarProyecto(id:number, proyecto:IProyecto):Observable<IProyecto>{
+    return this.client.put<IProyecto>(this.url+'/'+id, proyecto, {
+      headers:this.header
     })
   }
 }

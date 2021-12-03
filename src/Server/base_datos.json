@@ -35,7 +35,8 @@
       "fecha_in": "2021-11-16T21:49:55.164Z",
       "fecha_fn": "2021-11-16T18:49:55.232-03:00",
       "jefe_proy": 1,
-      "id": 1
+      "id": 1,
+      "integrantes": []
     },
     {
       "nombre": "Proyecto 2",
@@ -44,7 +45,8 @@
       "fecha_in": "2021-11-16T21:50:13.896Z",
       "fecha_fn": "2021-11-16T18:50:13.909-03:00",
       "jefe_proy": 1,
-      "id": 2
+      "id": 2,
+      "integrantes": []
     }
   ],
   "usuario_log": {

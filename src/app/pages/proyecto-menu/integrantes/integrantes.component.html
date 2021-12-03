@@ -26,6 +26,7 @@
         <ion-col size="12"></ion-col>
       </ion-row>
 
+      <!-- Integrantes -->
       <ion-row class="subrayadoIntegrantes">
         <ion-col size="8">
           <p>Camilo Tapia</p>
@@ -35,12 +36,12 @@
         </ion-col>
       </ion-row>
 
-      <ion-row class="subrayadoIntegrantes">
+      <ion-row class="subrayadoIntegrantes" *ngFor="let integrante of integrantes">
         <ion-col size="8">
-          <p>Camilo Tapia</p>
+          <!-- <p>{{integrante.nombre}}</p> -->
         </ion-col>
         <ion-col size="4">
-          <p>Jefe de proyecto</p>
+          <!-- <p>{{integrante.rol}}</p> -->
         </ion-col>
       </ion-row>
 
@@ -49,7 +50,7 @@
       </ion-row>
       <ion-row>
         <ion-col size="12">
-          <ion-button (click)="onClick()" expand="block" shape="round">
+          <ion-button href="integrantes/invitarUsuairo" expand="block" shape="round">
             Invitar
           </ion-button>
         </ion-col>

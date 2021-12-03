@@ -14,7 +14,7 @@ const routes: Routes = [
   component:IntegrantesComponent
 },
 {
-  path:'invitarUsuairo',
+  path:'integrantes/invitarUsuairo',
   component:InvitarUsuarioComponent
 }
 ];

@@ -1,5 +1,8 @@
 import { IUsuario } from "./IUsuario";
-
+export interface IIntegrante {
+    nombre:string,
+    rol:string
+}
 export interface IProyecto {
     id?: number,
     nombre: string,
@@ -8,5 +11,5 @@ export interface IProyecto {
     fecha_in: Date,
     fecha_fn: Date,
     jefe_proy: number,
-    integrantes?:Array<IUsuario>
+    integrantes?:Array<IIntegrante>
 }

@@ -20,7 +20,7 @@ export class ProyectoComponent implements OnInit {
   ngOnInit() {
     this.menuCtr.enable(true, "menuProyecto");
     // this.menuCtr.enable(true, "menuProyecto");
-    // this.servicioProyecto.traerProyecto(parseInt(window.localStorage.getItem("idProyecto"))).subscribe(data => { console.log(data) })
+    this.servicioProyecto.traerProyecto(parseInt(window.localStorage.getItem("idProyecto"))).subscribe(data => { console.log(data) })
   }
 
   public abrirMenu(){

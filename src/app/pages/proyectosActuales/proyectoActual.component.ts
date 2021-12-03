@@ -27,7 +27,8 @@ export class ProyectoActualComponent {
     }
 
     public abrirProyecto(id:number){
-        this.navCtr.navigateForward("home");
+        window.localStorage.setItem("idProyecto",""+id)
+        this.navCtr.navigateForward("proyectoMenu/"+id);
     }
 
     /**

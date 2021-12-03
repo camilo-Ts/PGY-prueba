@@ -44,4 +44,10 @@ export class ProyectoService {
     // console.log(this.url+"/"+id);
     
   }
+
+  public miProyecto(nuevoProyecto:IProyecto): Observable<IProyecto>{
+    return this.client.post<IProyecto>("http://localhost:3000/miProyecto", JSON.stringify(nuevoProyecto), {
+      headers: this.header
+    })
+  }
 }

@@ -124,7 +124,7 @@ const routes: Routes = [
     component:ProyectoComponent
   },
   {
-    path:'proyectoMenu',
+    path:'proyectoMenu/:id',
     loadChildren: () => import("./pages/proyecto-menu/proyecto-menu.module").then(m => m.ProyectoMenuModule)
   },
   

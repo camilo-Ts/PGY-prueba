@@ -29,19 +29,29 @@
   ],
   "proyecto": [
     {
+      "nombre": "Proyecto1",
+      "descripcion": "Descripcion 1",
+      "estado": true,
+      "fecha_in": "2021-11-16T21:49:55.164Z",
+      "fecha_fn": "2021-11-16T18:49:55.232-03:00",
+      "jefe_proy": 1,
+      "id": 1,
+      "integrantes": []
+    },
+    {
       "nombre": "",
       "descripcion": "",
       "estado": true,
-      "fecha_in": "2021-12-03T21:12:50.938Z",
-      "fecha_fn": "2021-12-03T21:12:50.938Z",
+      "fecha_in": "2021-12-04T18:09:07.978Z",
+      "fecha_fn": "2021-12-04T18:09:07.978Z",
       "jefe_proy": 0,
       "integrantes": [
         {
           "nombre": "Juan",
-          "rol": "fdsfd"
+          "rol": "Perro"
         }
       ],
-      "id": 1
+      "id": 2
     }
   ],
   "usuario_log": {

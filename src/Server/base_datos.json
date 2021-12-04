@@ -29,26 +29,35 @@
   ],
   "proyecto": [
     {
-      "nombre": "Proyecto1",
-      "descripcion": "Descripcion 1",
+      "nombre": "Pagina web",
+      "descripcion": "Esta es una descripcion de la pagina web que desarrollaremos en Angular",
       "estado": true,
-      "fecha_in": "2021-11-16T21:49:55.164Z",
-      "fecha_fn": "2021-11-16T18:49:55.232-03:00",
+      "fecha_in": "2021-12-04T18:47:34.345Z",
+      "fecha_fn": "2021-12-04T15:47:34.726-03:00",
       "jefe_proy": 1,
-      "id": 1,
-      "integrantes": []
-    },
-    {
-      "nombre": "",
-      "descripcion": "",
-      "estado": true,
-      "fecha_in": "2021-12-04T18:09:07.978Z",
-      "fecha_fn": "2021-12-04T18:09:07.978Z",
-      "jefe_proy": 0,
       "integrantes": [
         {
-          "nombre": "Juan",
-          "rol": "Perro"
+          "nombre": "CamiloTs",
+          "rol": ""
+        },
+        {
+          "nombre": "CamiloTs",
+          "rol": "Programador"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "nombre": "Proyecto 2",
+      "descripcion": "asdasd",
+      "estado": true,
+      "fecha_in": "2021-12-04T18:51:02.824Z",
+      "fecha_fn": "2021-12-04T15:51:07.554-03:00",
+      "jefe_proy": 1,
+      "integrantes": [
+        {
+          "nombre": "CamiloTs",
+          "rol": "Humano"
         }
       ],
       "id": 2

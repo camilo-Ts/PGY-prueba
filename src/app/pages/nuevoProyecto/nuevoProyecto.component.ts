@@ -12,7 +12,7 @@ import { IUsuario } from 'src/interfaces/IUsuario';
 })
 
 export class NuevoProyectoComponent {
-    public proyecto: IProyecto = { nombre: "", descripcion: "", estado: true, fecha_in: new Date(), fecha_fn: new Date(), jefe_proy: 0 }
+    public proyecto: IProyecto = { nombre: "", descripcion: "", estado: true, fecha_in: new Date(), fecha_fn: new Date(), jefe_proy: 0, integrantes:[] }
 
     private proyectoService: ProyectoService
     private usuarioService: UsuarioService

@@ -18,13 +18,13 @@ export class ProyectoComponent implements OnInit {
   constructor(private menuCtr:MenuController, private navCtr:NavController,private ruta:Router, private servicioProyecto:ProyectoService) { }
 
   ngOnInit() {
-    this.menuCtr.enable(true, "menuProyecto");
+    // this.menuCtr.enable(true, "menuProyecto");
     // this.menuCtr.enable(true, "menuProyecto");
     this.servicioProyecto.traerProyecto(parseInt(window.localStorage.getItem("idProyecto"))).subscribe(data => {this.proyecto=data })
   }
 
   public abrirMenu(){
-    this.menuCtr.open("menuProyecto")
+    this.menuCtr.open("first")
   }
 
   public irA(ruta:string){
